@@ -1,0 +1,700 @@
+{
+    "Dr Pankaj Mishra ":[
+     {
+      "Name Of Student": "Geetanshu Dev Meshram",
+      "Company": "IIITNR",
+      "Project Name": "Anomaly detection on industrial dataset",
+      "Completion Status March ": 0.3,
+      "Completion Status April ": 0.6,
+      "Remarks": "Detection of anomaly through various methods"
+     },
+     {
+      "Name Of Student": "Naksh Kumar",
+      "Company": "IIITNR",
+      "Project Name": "Preprocessing and model buliding on Network traffic classification using machine learning",
+      "Completion Status March ": 0.25,
+      "Completion Status April ": 0.5,
+      "Remarks": "Yes"
+     },
+     {
+      "Name Of Student": "Vatsal Jha",
+      "Company": "IIITNR",
+      "Project Name": "AUTONOMUS ROBOT --- The main work of this robot is to firstly detect the object after that taking command from admin after the command is taken it goes to the goal state after taking that object it return to the initial state.",
+      "Completion Status March ": 0.2,
+      "Completion Status April ": 0.65,
+      "Remarks": "Gained- model traing,Robot operating system(1),Ubuntu OS,yolo framework\n Planing- Gazebo simulation,ROS 2,AutoCAD,open manuplator"
+     },
+     {
+      "Name Of Student": "Tanisha sinha",
+      "Company": "IIITNR",
+      "Project Name": "Spark Job Scheduling",
+      "Completion Status March ": 0.25,
+      "Completion Status April ": 0.6,
+      "Remarks": "Spark, Quantum Computing"
+     },
+     {
+      "Name Of Student": "Gaurav kumar jha",
+      "Company": "IIITNR",
+      "Project Name": "Stereo vison map construction of a mobile robot in agriculture field",
+      "Completion Status March ": 0.2,
+      "Completion Status April ": 0.5,
+      "Remarks": "VINS algorithm , SLAM,ORB-SLAM ,OPEN-CV"
+     },
+     {
+      "Name Of Student": "Sneha Jha",
+      "Company": "IIITNR",
+      "Project Name": "Using ICBHI Dataset for detecting correct stage of copd accurately",
+      "Completion Status March ": 0.15,
+      "Completion Status April ": 0.6,
+      "Remarks": "CNN models , matlab , currently learning different wavelet transforms and about Siamese neural structure"
+     },
+     {
+      "Name Of Student": "Vaibhav Chaturvedi",
+      "Company": "IIITNR",
+      "Project Name": "I'm doing a research in Diabetes Prediction using ML algorithms",
+      "Completion Status March ": 0.05,
+      "Completion Status April ": 0.4,
+      "Remarks": "I've got to know how to do pre-preprocessing and learned how to implement Algorithms using Python"
+     },
+     {
+      "Name Of Student": "Nikhil Kumar yadav",
+      "Company": "IIITNR",
+      "Project Name": "Online payment system with voice assistant",
+      "Completion Status March ": 0.1,
+      "Completion Status April ": 0.3,
+      "Remarks": "Machine learning,Deep learning, Natural language processing, artificial intelligence"
+     },
+     {
+      "Name Of Student": "Parshuram Kumar",
+      "Company": "IIITNR",
+      "Project Name": "Working on application of image processing to detect soil moisture ,under project \"smart irrigation system\"",
+      "Completion Status March ": 0.2,
+      "Completion Status April ": 0.6,
+      "Remarks": "Image processing, \n Scikit image, openCV library ,GLCM implementation"
+     },
+     {
+      "Name Of Student": "Sanskriti Pandey",
+      "Company": "IIITNR",
+      "Project Name": "Myocardial infraction deduction using deep learning",
+      "Completion Status March ": 0.2,
+      "Completion Status April ": 0.6,
+      "Remarks": "Image segmentation in deep learning"
+     },
+     {
+      "Name Of Student": "Prakhar Chandrakar",
+      "Company": "IIITNR",
+      "Project Name": "Object detection model",
+      "Completion Status March ": 0.15,
+      "Completion Status April ": "40-50%",
+      "Remarks": "Machine learning and image processing"
+     },
+     {
+      "Name Of Student": "Saurabh Bharti",
+      "Company": "IIITNR",
+      "Project Name": "Fuzzy-Rough set classifier based early prediction of myocardial disease",
+      "Completion Status March ": 0.25,
+      "Completion Status April ": 0.5,
+      "Remarks": "Readinng and implementation of a research paper , fuzzy set and rough set theory , Data mining"
+     },
+     {
+      "Name Of Student": "Yogendra rathore",
+      "Company": "IIITNR",
+      "Project Name": "Early prediction of myocardial infraction using LSTM",
+      "Completion Status March ": 0.35,
+      "Completion Status April ": "80-85%",
+      "Remarks": "Machine learning , Deep learning, Neural networks"
+     }
+    ],
+    "Dr J.P Patra ":[
+     {
+      "Name of Student": "Yugal Kishore Patel",
+      "Project Name": "App Development MOBIVIEW",
+      "Company": "QTI Minds Pvt. Ltd.",
+      "Completion Status March ": "Mobiview - 60%, Application development - 2%",
+      "Completion Status April": "Mobiview - 90%, Application development - 10-15%"
+     },
+     {
+      "Name of Student": "Jonathan Phillip",
+      "Project Name": "LMS Project ( Web Develop)",
+      "Company": "QTI Minds Pvt. Ltd",
+      "Completion Status March ": "20-40%",
+      "Completion Status April": "60-70%"
+     },
+     {
+      "Name of Student": "Aryan",
+      "Project Name": "LMS Project ( Web Develop)",
+      "Company": "QTI Minds Pvt. Ltd",
+      "Completion Status March ": "40-50%",
+      "Completion Status April": "60-70%"
+     },
+     {
+      "Name of Student": "Vishnu",
+      "Project Name": "LMS Project ( Web Develop)",
+      "Company": "QTI Minds Pvt. Ltd",
+      "Completion Status March ": "40-50%",
+      "Completion Status April": "60-70%"
+     },
+     {
+      "Name of Student": "Himanshu Shekhar Verma",
+      "Project Name": "LMS Project ( Web Develop)",
+      "Company": "QTI Minds Pvt. Ltd",
+      "Completion Status March ": "40-50%",
+      "Completion Status April": "60-70%"
+     },
+     {
+      "Name of Student": "Mausam",
+      "Project Name": "Medical Summarisation using Gen AI",
+      "Company": "QTI Minds Pvt. Ltd",
+      "Completion Status March ": 0.5,
+      "Completion Status April": 0.5
+     },
+     {
+      "Name of Student": "Vikash Mishra",
+      "Project Name": "Deployment of Object detection with ML model & On device AI",
+      "Company": "QTI Minds Pvt. Ltd",
+      "Completion Status March ": 0.4,
+      "Completion Status April": 1
+     },
+     {
+      "Name of Student": "Vivek Kumar",
+      "Project Name": "Deployment of Object detection with ML model & On device AI",
+      "Company": "QTI Minds Pvt. Ltd",
+      "Completion Status March ": 0.4,
+      "Completion Status April": 1
+     },
+     {
+      "Name of Student": "Krishmika Saha",
+      "Project Name": "Deployment of ML models & MOBIVIEW",
+      "Company": "QTI Minds Pvt. Ltd",
+      "Completion Status March ": 0.5,
+      "Completion Status April": "10-20%, Mobiview - 100 %"
+     },
+     {
+      "Name of Student": "Kishan Jaiswal",
+      "Project Name": "Mobiview & web development ( Not yet started)",
+      "Company": "QTI Minds Pvt. Ltd",
+      "Completion Status March ": 0.5,
+      "Completion Status April": 0.9
+     },
+     {
+      "Name of Student": "Saket Markandey",
+      "Project Name": "Android Development",
+      "Company": "QTI Minds Pvt. Ltd",
+      "Completion Status March ": 0.3,
+      "Completion Status April": 0.6
+     },
+     {
+      "Name of Student": "Umashankar Nishad",
+      "Project Name": "MOBIVIEW",
+      "Company": "QTI Minds Pvt. Ltd.",
+      "Completion Status March ": 0.2,
+      "Completion Status April": 0.85
+     }
+    ],
+    "Dr Toran Verma ":[
+     {
+      "Name of Student": "Bhavesh Kanoje",
+      "Company": "IIST Trivendrum",
+      "Completion Status March": 0.15,
+      "Completion Status April ": 0.35
+     },
+     {
+      "Name of Student": "Mehul Pandey",
+      "Company": "IIST Trivendrum",
+      "Completion Status March": 0.2,
+      "Completion Status April ": 0.4
+     },
+     {
+      "Name of Student": "Venkata Madhav",
+      "Company": "IIST Trivendrum",
+      "Completion Status March": 0.15,
+      "Completion Status April ": 0.35
+     },
+     {
+      "Name of Student": "Vishwamani",
+      "Company": "IIST Trivendrum",
+      "Completion Status March": 0.25,
+      "Completion Status April ": 0.45
+     },
+     {
+      "Name of Student": "Devika Sinha",
+      "Company": "IIST Trivendrum",
+      "Completion Status March": 0.2,
+      "Completion Status April ": 0.4
+     },
+     {
+      "Name of Student": "Aayushi Singh",
+      "Company": "IIST Trivendrum",
+      "Completion Status March": 0.2,
+      "Completion Status April ": 0.5
+     },
+     {
+      "Name of Student": "Akash Kumar Singh",
+      "Company": "IIST Trivendrum",
+      "Completion Status March": 0.25,
+      "Completion Status April ": 0.45
+     },
+     {
+      "Name of Student": "Shivam Sharma",
+      "Company": "IIST Trivendrum",
+      "Completion Status March": 0.35,
+      "Completion Status April ": 0.55
+     },
+     {
+      "Name of Student": "Ranjan Singh Yadav",
+      "Company": "IIST Trivendrum",
+      "Completion Status March": 0.25,
+      "Completion Status April ": 0.35
+     },
+     {
+      "Name of Student": "Likhitha",
+      "Company": "IIST Trivendrum",
+      "Completion Status March": 0.2,
+      "Completion Status April ": 0.5
+     },
+     {
+      "Name of Student": "Ankush Kumar",
+      "Company": "IIST Trivendrum",
+      "Completion Status March": 0.3,
+      "Completion Status April ": 0.4
+     },
+     {
+      "Name of Student": "Gaurav Kumar Azad",
+      "Company": "IIST Trivendrum",
+      "Completion Status March": 0.2,
+      "Completion Status April ": 0.4
+     }
+    ],
+    "Dr Rohit Miri ":[
+     {
+      "Name of Student": "Annu Kumari",
+      "Company Name": "College of Engineering Pune, Maharastra",
+      "Project Name": "Virtual tryon outfits by using ML",
+      "Completion Status March ": 0.2,
+      "Completion Status April": 0.5
+     },
+     {
+      "Name of Student": "Bhumika Chandrakar",
+      "Company Name": "College of Engineering Pune, Maharastra",
+      "Project Name": "Rice Disease Identification and Classification",
+      "Completion Status March ": 0.2,
+      "Completion Status April": 0.5
+     },
+     {
+      "Name of Student": "Khushbu Nirmalkar",
+      "Company Name": "College of Engineering Pune, Maharastra",
+      "Project Name": "Deep Learning for medical Anomaly detection (Lung Abnormality- A study withchest X-ray and Lung CT scan Images )",
+      "Completion Status March ": 0.15,
+      "Completion Status April": 0.55
+     },
+     {
+      "Name of Student": "Shiva Kumar",
+      "Company Name": "College of Engineering Pune, Maharastra",
+      "Project Name": "Accident Detection Using ML and AI Techniques",
+      "Completion Status March ": 0.2,
+      "Completion Status April": 0.5
+     },
+     {
+      "Name of Student": "Sidhant Sahu",
+      "Company Name": "College of Engineering Pune, Maharastra",
+      "Project Name": "HAIFIT:Humsn=Centered AI for Fashion Image Translation",
+      "Completion Status March ": 0.15,
+      "Completion Status April": 0.55
+     },
+     {
+      "Name of Student": "Yash Dewangan",
+      "Company Name": "College of Engineering Pune, Maharastra",
+      "Project Name": "Deepfake Video Detection Using Convolutional Neural Networks and GAN",
+      "Completion Status March ": 0.2,
+      "Completion Status April": 0.5
+     }
+    ],
+    "Dr Nachiket Tapas ":[
+     {
+      "Name of Student": "Aniruddha Kumar Yadav",
+      "Project Name": "Currently working on finding fields where blockchain can be applied",
+      "Company Name": "IIITNR",
+      "Completion Status March": 0.2,
+      "Completion Status April ": 0.6,
+      "Remarks": "Research POV on blockchain, smart contracts and digital signature"
+     },
+     {
+      "Name of Student": "Shristi sahu",
+      "Project Name": "Trying to improve the accuracy of the paper which i have implemented before by using different models.",
+      "Company Name": "IIITNR",
+      "Completion Status March": 0.25,
+      "Completion Status April ": 0.5,
+      "Remarks": "Cnn"
+     },
+     {
+      "Name of Student": "Priyanshu sahu",
+      "Project Name": "Voice assist in payment app",
+      "Company Name": "IIITNR",
+      "Completion Status March": 0.23,
+      "Completion Status April ": 0.5,
+      "Remarks": "Learned about deep learning and machine learning"
+     },
+     {
+      "Name of Student": "Tomesh sahu",
+      "Project Name": "On network traffic classification",
+      "Company Name": "IIITNR",
+      "Completion Status March": 0.15,
+      "Completion Status April ": 0.5,
+      "Remarks": "uwwsn"
+     },
+     {
+      "Name of Student": "Abhishek Bhagat",
+      "Project Name": "Image preprocessing",
+      "Company Name": "IIITNR",
+      "Completion Status March": 0.2,
+      "Completion Status April ": 0.5,
+      "Remarks": "Deep learning, Machine learning, CNN model"
+     },
+     {
+      "Name of Student": "Bhavik Deshmukh",
+      "Project Name": "Application Research of Blockchain Technology in Financial Field",
+      "Company Name": "IIITNR",
+      "Completion Status March": 0.2,
+      "Completion Status April ": 0.6,
+      "Remarks": "Fundamentals of blockchain, Cryptography, python, flask"
+     },
+     {
+      "Name of Student": "Kumar Manikarnam",
+      "Project Name": "Social media feedback on product recommendation system",
+      "Company Name": "IIITNR",
+      "Completion Status March": 0.3,
+      "Completion Status April ": 0.5,
+      "Remarks": "Deep learning"
+     },
+     {
+      "Name of Student": "Niyatee Saha",
+      "Project Name": "Fake image detection.. image forgery",
+      "Company Name": "IIITNR",
+      "Completion Status March": 0.2,
+      "Completion Status April ": 0.5,
+      "Remarks": "to run existing model"
+     },
+     {
+      "Name of Student": "Aakash tigga",
+      "Project Name": "Smart waste management system project and wsn routing protocol with matlab and python",
+      "Company Name": "IIITNR",
+      "Completion Status March": 0.15,
+      "Completion Status April ": "30-40%",
+      "Remarks": "Matlab, knn etc"
+     },
+     {
+      "Name of Student": "Yashashvi Mahobe",
+      "Project Name": "Network Flow Classification",
+      "Company Name": "IIITNR",
+      "Completion Status March": 0.2,
+      "Completion Status April ": "40-50%",
+      "Remarks": "Wireshark, NS3"
+     }
+    ],
+    "Mr. Shesh Narayan Sahu":[
+     {
+      "Name of Student": "Davesh kumar sahu",
+      "Project Name": "Build an AMR (autonomous robot)",
+      "Company Name": "Bot shreyashi Robotics",
+      "Completion Status March": 0.3,
+      "Completion Status April": 0.7
+     },
+     {
+      "Name of Student": "Anjali Patel",
+      "Project Name": "GAN based image generation",
+      "Company Name": "Brand Book Studio",
+      "Completion Status March": 0.2,
+      "Completion Status April": 0.4
+     },
+     {
+      "Name of Student": "Veeraboina Jashwanth",
+      "Project Name": "GAN based image generation",
+      "Company Name": "Brand Book Studio",
+      "Completion Status March": 0.2,
+      "Completion Status April": 0.4
+     },
+     {
+      "Name of Student": "Birudula Prem Kumar",
+      "Project Name": "Soft Memory Alert System",
+      "Company Name": "GOOD TECH MIND'S (GTM)",
+      "Completion Status March": 0.3,
+      "Completion Status April": 0.7
+     },
+     {
+      "Name of Student": "Pavan jarapla",
+      "Project Name": "Soft Memory Alert System",
+      "Company Name": "GOOD TECH MIND'S",
+      "Completion Status March": 0.3,
+      "Completion Status April": 0.6
+     },
+     {
+      "Name of Student": "Mandala Sai Chandana",
+      "Project Name": "Reconciliation Automation Model",
+      "Company Name": "Nukkad Shops",
+      "Completion Status March": 0.2,
+      "Completion Status April": 0.8
+     },
+     {
+      "Name of Student": "Raj Kamal Banjare",
+      "Project Name": "Construction Site",
+      "Company Name": "icolab software PVT LTD",
+      "Completion Status March": 0.3,
+      "Completion Status April": 0.6
+     },
+     {
+      "Name of Student": "Dolly Sahu",
+      "Project Name": "Website for Travel agency",
+      "Company Name": "icolab software PVT LTD",
+      "Completion Status March": 0.3,
+      "Completion Status April": 0.6
+     },
+     {
+      "Name of Student": "Mansi Dewangan",
+      "Project Name": "Website construction",
+      "Company Name": "Technolitics, Raipur",
+      "Completion Status March": 0.4,
+      "Completion Status April": 0.8
+     },
+     {
+      "Name of Student": "Kumari Purvi",
+      "Project Name": "Website construction for restaurant",
+      "Company Name": "Technolitics, Raipur",
+      "Completion Status March": 0.3,
+      "Completion Status April": 0.8
+     }
+    ],
+    "Ms. Divya Shukla ":[
+     {
+      "Name of Student": "Shalini Pareek",
+      "Company Name": "I-Connectresources",
+      "Project Name": "•Learned JAVASCRIPT \n •Learning DSA and problem-solving using TELESCOPE",
+      "Completion Status March": 0.2,
+      "Completion Status April": "60-70%"
+     },
+     {
+      "Name of Student": "Rishabh Tiwari",
+      "Company Name": "I-Connectresources",
+      "Project Name": "•Training Programming for MERN stack developer •Implement Management Systems and simple application backend •REST API Testing using postman.",
+      "Completion Status March": 0.6,
+      "Completion Status April": "Completed"
+     },
+     {
+      "Name of Student": "Prakriti Patkar",
+      "Company Name": "I-Connectresources",
+      "Project Name": "•Algorithms \n  •Data Structures",
+      "Completion Status March": 0.3,
+      "Completion Status April": "60-70%"
+     },
+     {
+      "Name of Student": "Himanshu Sahu",
+      "Company Name": "Prema Software Solutions Pvt. Ltd. Bhopal",
+      "Project Name": "•Assessment of Farm Mechanization Status in India by ICAR - Central Institute of Agricultural Engineering, Bhopal.\n •Developing Android app \n •some changes in Website Backend •Testing of Android app \n •Visited the client, gained access to the server room made some changes, showed the project to the client, and noted the next changes to be done •Visited NITTTR, Bhopal for assistance to train the students for AI\/ML training.",
+      "Completion Status March": 0.4,
+      "Completion Status April": "•50%\n \n \n \n \n \n \n Completed ",
+      "Remarks": "•Android Studio\n •Eclipse framework of JAVA"
+     },
+     {
+      "Name of Student": "Hemang Singh",
+      "Company Name": "Kinda Solutions Pvt Ltd",
+      "Project Name": "Stock management System",
+      "Completion Status March": 0.3,
+      "Completion Status April": 0.6,
+      "Remarks": "•using PHP and •CodeIgniter 4"
+     },
+     {
+      "Name of Student": "Sejal kishan Verma",
+      "Company Name": "I-Connectresources",
+      "Project Name": "•Learned JAVASCRIPT \n •Learning DSA and problem-solving using TELESCOPE",
+      "Completion Status March": 0.2,
+      "Completion Status April": 0.7
+     }
+    ],
+    "Mr. Ramakant Ganjeshwar ":[
+     {
+      "Name of Student": "Sashanth Raju Gundala",
+      "Project Name": "Robotics",
+      "Company": "Robocoupler",
+      "Completion Status March ": 0.2,
+      "Completion Status April": 0.6
+     },
+     {
+      "Name of Student": "Kuldeep Yadu",
+      "Project Name": "Web Development",
+      "Company": "Techonet pvt. ltd",
+      "Completion Status March ": 0.3,
+      "Completion Status April": 0.7
+     },
+     {
+      "Name of Student": "Dharmdhwaj sahu",
+      "Project Name": "Web Development",
+      "Company": "Techonet pvt. ltd.",
+      "Completion Status March ": 0.3,
+      "Completion Status April": 0.7
+     },
+     {
+      "Name of Student": "Prajnajyoti nath",
+      "Project Name": "Web Development",
+      "Company": "Techonet pvt. ltd.",
+      "Completion Status March ": 0.2,
+      "Completion Status April": 0.6
+     },
+     {
+      "Name of Student": "Prakash Kumar Mali",
+      "Project Name": "Web Development",
+      "Company": "Techonet pvt. ltd.",
+      "Completion Status March ": 0.3,
+      "Completion Status April": 0.7
+     },
+     {
+      "Name of Student": "Bhavesh Ogare",
+      "Project Name": "Web Development",
+      "Company": "Techonet pvt. ltd.",
+      "Completion Status March ": 0.3,
+      "Completion Status April": 0.7
+     },
+     {
+      "Name of Student": "Shastika Singh Shyam",
+      "Project Name": "Web Development",
+      "Company": "Techonet pvt. ltd.",
+      "Completion Status March ": 0.4,
+      "Completion Status April": 0.7
+     },
+     {
+      "Name of Student": "Harsh Patel",
+      "Project Name": "Web Development",
+      "Company": "Techonet pvt. ltd.",
+      "Completion Status March ": 0.4,
+      "Completion Status April": 0.7
+     },
+     {
+      "Name of Student": "Sunil Sahu",
+      "Project Name": "Web Development",
+      "Company": "Techonet pvt. ltd.",
+      "Completion Status March ": 0.3,
+      "Completion Status April": 0.7
+     },
+     {
+      "Name of Student": "Surendra Pradhan",
+      "Project Name": "Web Development",
+      "Company": "Techonet pvt. ltd.",
+      "Completion Status March ": 0.3,
+      "Completion Status April": 0.7
+     },
+     {
+      "Name of Student": "Ruchi Shukla",
+      "Project Name": "Web Development",
+      "Company": "Techonet pvt. ltd.",
+      "Completion Status March ": 0.4,
+      "Completion Status April": 0.7
+     }
+    ],
+    "Ms. Basanti Minj ":[
+     {
+      "Name of Student": "Shubham Raj",
+      "Project Name": "Handwriting classification model",
+      "Company": "IIT PATNA",
+      "Completion Status March ": 0.3,
+      "Completion Status April ": 0.6
+     },
+     {
+      "Name of Student": "Mantosh",
+      "Project Name": "Emotion Classification from text data with explanation",
+      "Company": "NIT Patna",
+      "Completion Status March ": 0.2,
+      "Completion Status April ": 0.6
+     },
+     {
+      "Name of Student": "G kritika",
+      "Project Name": "Streamlining AI Conversations Development with Hugging Face and Jenkins",
+      "Company": "Zivaka, Kolkata",
+      "Completion Status March ": 0.3,
+      "Completion Status April ": 0.7
+     },
+     {
+      "Name of Student": "Ashish Sinha",
+      "Project Name": "Medical Image Classification using Transfer learning algorithms",
+      "Company": "NIT Jamshedpur",
+      "Completion Status March ": 0.2,
+      "Completion Status April ": 0.5
+     },
+     {
+      "Name of Student": "Raja Babu",
+      "Project Name": "Document and image Classification",
+      "Company": "IIT PATNA",
+      "Completion Status March ": 0.3,
+      "Completion Status April ": 0.5
+     },
+     {
+      "Name of Student": "Shruti Dubey",
+      "Project Name": "Deep Learning , NLPb and LLM applications in finances",
+      "Company": "IIT Kharagpur",
+      "Completion Status March ": 0.2,
+      "Completion Status April ": 0.6
+     },
+     {
+      "Name of Student": "Ritik Kumar",
+      "Project Name": "Exploring Multimodal Large Language Models for Financial Applications",
+      "Company": "IIT Kharagpur",
+      "Completion Status March ": 0.15,
+      "Completion Status April ": 0.6
+     },
+     {
+      "Name of Student": "Ayush Pawar",
+      "Project Name": "Flutter Android App Development",
+      "Company": "Visanka Technologies",
+      "Completion Status March ": 0.25,
+      "Completion Status April ": 0.65
+     }
+    ],
+    "Mr. Abhinav Jagtap ":[
+     {
+      "Name of Student": "Saquib Hussain",
+      "Project Name": "RL based IRS",
+      "Company": "IIT Jammu",
+      "Completion Status March ": 0.5,
+      "Completion Status April ": 0.8
+     },
+     {
+      "Name of Student": "Jayant Patel",
+      "Project Name": "Object Detection using mm detection",
+      "Company": "IIT Jammu",
+      "Completion Status March ": 0.48,
+      "Completion Status April ": 0.98
+     },
+     {
+      "Name of Student": "Arpan Tamrakar",
+      "Project Name": "Model Compression",
+      "Company": "IIT Jammu",
+      "Completion Status March ": 0.39,
+      "Completion Status April ": 0.79
+     },
+     {
+      "Name of Student": "Vedika Goyal",
+      "Project Name": "Not yet decided (studying research papers)",
+      "Company": "IISER Bhopal",
+      "Completion Status March ": 0.5,
+      "Completion Status April ": 0.8
+     },
+     {
+      "Name of Student": "Madhurima Rawat",
+      "Project Name": "Pre-failure Alerting in BRM",
+      "Company": "IIT Bhilai",
+      "Completion Status March ": 0.54,
+      "Completion Status April ": 0.84
+     },
+     {
+      "Name of Student": "Dheeraj Harinath Mishra",
+      "Project Name": "Anomaly Detection in Time Series Data using Graph Neural\n Networks",
+      "Company": "IIT Bhilai",
+      "Completion Status March ": 0.46,
+      "Completion Status April ": 0.86
+     },
+     {
+      "Name of Student": "Rajnish Kumar",
+      "Project Name": "Social Network Analysis and Application (SoNAA)",
+      "Company": "IIT Jodhpur",
+      "Completion Status March ": 0.33,
+      "Completion Status April ": 0.93
+     }
+    ]
+    }

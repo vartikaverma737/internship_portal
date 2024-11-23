@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Student Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .details-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .mentor-section {
+            margin-bottom: 30px;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .mentor-name {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        .student-card {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+        .student-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .student-info {
+            margin: 5px 0;
+        }
+        .student-name {
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .progress-bar {
+            background: #e9ecef;
+            border-radius: 4px;
+            height: 20px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .progress {
+            background: #3498db;
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 20px;
+            transition: background 0.3s;
+        }
+        .back-button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Back to Home</a>
+    <div class="details-container">
+        <h1>All Student Details</h1>
+        <div id="student-details"></div>
+    </div>
+
+    <script>
+        async function loadStudentDetails() {
+            try {
+                const response = await fetch('details.json');
+                const data = await response.json();
+                const container = document.getElementById('student-details');
+
+                for (const mentor in data) {
+                    const mentorSection = document.createElement('div');
+                    mentorSection.className = 'mentor-section';
+
+                    const mentorName = document.createElement('h2');
+                    mentorName.className = 'mentor-name';
+                    mentorName.textContent = mentor;
+                    mentorSection.appendChild(mentorName);
+
+                    data[mentor].forEach(student => {
+                        const studentCard = document.createElement('div');
+                        studentCard.className = 'student-card';
+
+                        const studentName = document.createElement('div');
+                        studentName.className = 'student-info student-name';
+                        studentName.textContent = student['Name Of Student'] || student['Name of Student'];
+
+                        const company = document.createElement('div');
+                        company.className = 'student-info';
+                        company.textContent = `Company: ${student['Company'] || student['Company Name']}`;
+
+                        const project = document.createElement('div');
+                        project.className = 'student-info';
+                        project.textContent = `Project: ${student['Project Name']}`;
+
+                        const progressContainer = document.createElement('div');
+                        progressContainer.className = 'student-info';
+                        
+                        const marchProgress = student['Completion Status March'] || student['Completion Status March '] || 0;
+                        const aprilProgress = student['Completion Status April'] || student['Completion Status April '] || 0;
+                        
+                        progressContainer.innerHTML = `
+                            <div>Progress March:</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: ${marchProgress * 100}%"></div>
+                            </div>
+                            <div>Progress April:</div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: ${aprilProgress * 100}%"></div>
+                            </div>
+                        `;
+
+                        const remarks = document.createElement('div');
+                        remarks.className = 'student-info';
+                        remarks.textContent = `Remarks: ${student['Remarks'] || 'N/A'}`;
+
+                        studentCard.appendChild(studentName);
+                        studentCard.appendChild(company);
+                        studentCard.appendChild(project);
+                        studentCard.appendChild(progressContainer);
+                        studentCard.appendChild(remarks);
+
+                        mentorSection.appendChild(studentCard);
+                    });
+
+                    container.appendChild(mentorSection);
+                }
+            } catch (error) {
+                console.error('Error loading student details:', error);
+                document.getElementById('student-details').innerHTML = 'Error loading student details. Please try again later.';
+            }
+        }
+
+        loadStudentDetails();
+    </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+{
+    "educational_institutions": [
+        {
+            "name": "IIST Thiruvananthapuram",
+            "type": "Deemed University",
+            "location": {
+                "city": "Thiruvananthapuram",
+                "state": "Kerala",
+                "country": "India"
+            },
+            "established": 2007,
+            "contact": {
+                "phone": "+91 (471) 2568477 / 2568478",
+                "email": "info@iist.ac.in"
+            },
+            "programs": ["B.Tech", "M.Tech", "PhD"],
+            "nirf_ranking_2023": 48,
+            "admission_criteria": {
+                "undergraduate": "JEE Advanced scores",
+                "postgraduate": "GATE scores"
+            }
+        },
+        {
+            "name": "IIIT Naya Raipur",
+            "type": "Institute of Information Technology",
+            "location": {
+                "city": "Naya Raipur",
+                "state": "Chhattisgarh",
+                "country": "India"
+            },
+            "internship_details": {
+                "duration": "6-8 weeks",
+                "type": "Outreach Internship Program (OIP)",
+                "stipend": "Based on performance"
+            }
+        },
+        {
+            "name": "NIT Patna",
+            "type": "National Institute of Technology",
+            "location": {
+                "city": "Patna",
+                "state": "Bihar",
+                "country": "India"
+            },
+            "established": 2004,
+            "contact": {
+                "email": "director@nitp.ac.in"
+            },
+            "internship_details": {
+                "duration": "6-8 weeks",
+                "placement_rate": "30-40%",
+                "roles": ["SDE Intern", "Graduate Engineer Trainee", "Business Analyst"]
+            }
+        },
+        {
+            "name": "IIT Jammu",
+            "type": "Indian Institute of Technology",
+            "location": {
+                "city": "Jammu",
+                "state": "Jammu and Kashmir",
+                "country": "India"
+            },
+            "established": 2016,
+            "contact": {
+                "email": "info@iitjammu.ac.in"
+            },
+            "internship_details": {
+                "duration": "2 months",
+                "domains": ["Computer Science", "Electronics", "Mechanical Engineering"]
+            }
+        },
+        {
+            "name": "IIT Kharagpur",
+            "type": "Indian Institute of Technology",
+            "location": {
+                "city": "Kharagpur",
+                "state": "West Bengal",
+                "country": "India"
+            },
+            "established": 1951,
+            "contact": {
+                "email": "cdc@iitkgp.ac.in"
+            },
+            "internship_details": {
+                "program": "Compulsory Summer Internship",
+                "duration": "8 weeks",
+                "eligible_students": [
+                    "Third year B.Tech",
+                    "Fourth year dual degree",
+                    "First year M.Tech"
+                ],
+                "period": "May to July"
+            }
+        },
+        {
+            "name": "IISER Bhopal",
+            "type": "Indian Institute of Science Education and Research",
+            "location": {
+                "city": "Bhopal",
+                "state": "Madhya Pradesh",
+                "country": "India"
+            },
+            "established": 2008,
+            "contact": {
+                "email": "info@iiserb.ac.in"
+            },
+            "internship_details": {
+                "duration": "6-8 weeks",
+                "domains": [
+                    "Biology",
+                    "Chemistry",
+                    "Physics",
+                    "Mathematics"
+                ],
+                "type": "Research-oriented"
+            }
+        }
+    ],
+    "companies": [
+        {
+            "name": "ICOLAB Software Pvt Ltd",
+            "type": "Software Development",
+            "internship_details": {
+                "domains": [
+                    "Software Development",
+                    "Quality Assurance",
+                    "Project Management"
+                ],
+                "skills_required": [
+                    "Java",
+                    "Python",
+                    "C#",
+                    "Web Technologies"
+                ]
+            }
+        },
+        {
+            "name": "Techonet Pvt Ltd",
+            "type": "Software Development",
+            "internship_details": {
+                "domains": [
+                    "Software Development",
+                    "Quality Assurance",
+                    "Project Management"
+                ],
+                "duration": "Few weeks to several months"
+            }
+        },
+        {
+            "name": "Visank Technology",
+            "location": {
+                "city": "Pune",
+                "state": "Maharashtra",
+                "country": "India"
+            },
+            "services": [
+                "Web Development",
+                "Mobile App Development",
+                "IT Consulting",
+                "Digital Marketing"
+            ],
+            "internship_details": {
+                "duration": "2-6 months",
+                "domains": [
+                    "Software Development",
+                    "Web Development",
+                    "Mobile App Development",
+                    "IT Consulting"
+                ]
+            }
+        },
+        {
+            "name": "FeyNN Labs",
+            "type": "AI and Technology Solutions",
+            "location": {
+                "city": "Guwahati",
+                "state": "Assam",
+                "country": "India"
+            },
+            "services": [
+                "AI Integration",
+                "Education in AI",
+                "B2B Services"
+            ],
+            "internship_details": {
+                "duration": "6 weeks to 3 months",
+                "domains": [
+                    "AI Development",
+                    "Data Analysis",
+                    "Software Development",
+                    "Project Management"
+                ],
+                "skills_required": [
+                    "Python",
+                    "Java",
+                    "Machine Learning"
+                ]
+            }
+        },
+        {
+            "name": "QTi Minds Pvt. Ltd.",
+            "type": "Technology Solutions",
+            "location": {
+                "city": "Hyderabad",
+                "state": "Telangana",
+                "country": "India"
+            },
+            "services": [
+                "Mobile Development",
+                "Embedded Software",
+                "AI/ML Solutions",
+                "Full Stack Development"
+            ],
+            "internship_details": {
+                "duration": "6 weeks to 6 months",
+                "domains": [
+                    "Software Development",
+                    "Testing",
+                    "AI/ML Projects",
+                    "Product Engineering"
+                ],
+                "skills_required": [
+                    "Python",
+                    "Java",
+                    "C++",
+                    "Software Development Practices"
+                ]
+            }
+        }
+    ]
+}

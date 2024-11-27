@@ -1,7 +1,6 @@
 ﻿# internship_portal
  
-CSVTU Internship Portal
-Overview
+
 The CSVTU Internship Portal is designed to bridge the gap between juniors and seniors by providing a centralized platform where juniors can access detailed information about the internships completed by their seniors. This portal aims to promote knowledge sharing and guide students toward better internship opportunities by learning from their seniors' experiences.
 
 Features

@@ -38,10 +38,25 @@
         }
         .student-info {
             margin: 5px 0;
+            line-height: 1.5;
         }
         .student-name {
             color: #2c3e50;
             font-weight: bold;
+            font-size: 1.1em;
+        }
+        .company-details-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+        .company-details-btn:hover {
+            background-color: #2980b9;
         }
         .progress-bar {
             background: #e9ecef;
@@ -67,6 +82,10 @@
         }
         .back-button:hover {
             background: #2980b9;
+        }
+        .label {
+            font-weight: 600;
+            color: #34495e;
         }
     </style>
 </head>
@@ -98,43 +117,54 @@
                         studentCard.className = 'student-card';
 
                         const studentName = document.createElement('div');
-                        studentName.className = 'student-info student-name';
-                        studentName.textContent = student['Name Of Student'] || student['Name of Student'];
+                        studentName.className = 'student-info';
+                        studentName.innerHTML = `<span class="student-name">${student['Name Of Student'] || student['Name of Student']}</span>`;
 
                         const company = document.createElement('div');
                         company.className = 'student-info';
-                        company.textContent = `Company: ${student['Company'] || student['Company Name']}`;
+                        company.innerHTML = `<span class="label">Company:</span> ${student['Company'] || student['Company Name']}`;
 
                         const project = document.createElement('div');
                         project.className = 'student-info';
-                        project.textContent = `Project: ${student['Project Name']}`;
+                        project.innerHTML = `<span class="label">Project:</span> ${student['Project Name'] || 'N/A'}`;
+
+                        const companyDetailsBtn = document.createElement('div');
+                        companyDetailsBtn.className = 'student-info';
+                        companyDetailsBtn.innerHTML = `<button class="company-details-btn" onclick="viewCompanyDetails('${student['Name Of Student'] || student['Name of Student']}', '${mentor}')">See Company Details</button>`;
 
                         const progressContainer = document.createElement('div');
                         progressContainer.className = 'student-info';
                         
-                        const marchProgress = student['Completion Status March'] || student['Completion Status March '] || 0;
-                        const aprilProgress = student['Completion Status April'] || student['Completion Status April '] || 0;
+                        // Convert decimal progress to percentage and handle missing values
+                        const marchProgress = (parseFloat(student['Completion Status March'] || student['Completion Status March '] || 0) * 100).toFixed(0);
+                        const aprilProgress = (parseFloat(student['Completion Status April'] || student['Completion Status April '] || 0) * 100).toFixed(0);
+                        const mayProgress = (parseFloat(student['Completion Status May'] || student['Completion Status May '] || 0) * 100).toFixed(0);
                         
                         progressContainer.innerHTML = `
-                            <div>Progress March:</div>
+                            <div><span class="label">Progress March:</span></div>
                             <div class="progress-bar">
-                                <div class="progress" style="width: ${marchProgress * 100}%"></div>
+                                <div class="progress" style="width: ${marchProgress}%" title="${marchProgress}%"></div>
                             </div>
-                            <div>Progress April:</div>
+                            <div><span class="label">Progress April:</span></div>
                             <div class="progress-bar">
-                                <div class="progress" style="width: ${aprilProgress * 100}%"></div>
+                                <div class="progress" style="width: ${aprilProgress}%" title="${aprilProgress}%"></div>
+                            </div>
+                            <div><span class="label">Progress May:</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: ${mayProgress}%" title="${mayProgress}%"></div>
                             </div>
                         `;
 
                         const remarks = document.createElement('div');
                         remarks.className = 'student-info';
-                        remarks.textContent = `Remarks: ${student['Remarks'] || 'N/A'}`;
+                        remarks.innerHTML = `<span class="label">Remarks:</span> ${student['Remarks'] || 'N/A'}`;
 
                         studentCard.appendChild(studentName);
                         studentCard.appendChild(company);
                         studentCard.appendChild(project);
                         studentCard.appendChild(progressContainer);
                         studentCard.appendChild(remarks);
+                        studentCard.appendChild(companyDetailsBtn);
 
                         mentorSection.appendChild(studentCard);
                     });
@@ -145,6 +175,10 @@
                 console.error('Error loading student details:', error);
                 document.getElementById('student-details').innerHTML = 'Error loading student details. Please try again later.';
             }
+        }
+
+        function viewCompanyDetails(studentName, mentor) {
+            window.location.href = `company_details.html?student=${encodeURIComponent(studentName)}&mentor=${encodeURIComponent(mentor)}`;
         }
 
         loadStudentDetails();

@@ -179,161 +179,189 @@ section #text {
 
 
 /* Glass Effect */
-.perfect{
-    background: rgba(154, 177, 136, 0.1);
-border-radius: 15px;
-padding: 20px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.3);
-text-align: center;
-color: #44dcc8;
-font-family: 'Arial', sans-serif;
-width: 90%;
-margin: auto;
-display: flex;}
-.book{
-    background: rgba(154, 177, 136, 0.1);
+.perfect {
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    text-align: center;
-    color: #44dcc8;
-    font-family: 'Arial', sans-serif;
+    padding: 30px;
+    margin: 25px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 90%;
-    margin: auto;
-    display: flex;
-
+    max-width: 1200px;
+    color: inherit;
 }
 
+.perfect * {
+    color: #000000;
+}
 
-
-
+.perfect p {
+    color: #000000 !important;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 15px 0;
+    padding: 0 20px;
+}
 
 .glass {
-    text-align: center;
+    background-color: transparent;
     padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #d3caca;
-   }
-   
-   h3 {
-    font-size: 28px;
-    color: #130505;
-    margin-bottom: 30px;
-   }
-   
-   .row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-   }
-   
-   .photo {
-    margin: 15px;
-    text-align: center;
-    transition: 1s;
-   }
-   
-   .photo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-   }
-   
-   .photo h4 {
-    font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    color: #050101;
-   }
-   
-   .photo p {
-    font-size: 16px;
-      margin-bottom: 5px;
-    margin-top: 0;
-    color: #050101;
-   }
-   .sample p{
-    font-size: 45px;
-    color: black;
-    padding-left: 10px;
-   }
-   .photo:hover{
-    transform:scale(1.3);
+    border-radius: 10px;
 }
-   
-   
-/*.glass {
-    
-    background: rgba(255, 255, 255, 0.1);
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  text-align: center;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
-  width: 90%;
-  margin: auto;
-display: flex;
-}
-.glass h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-    color: #fff;
-  }
 
-.photo-container {
+.glass h3 {
+    font-size: 28px;
+    color: #003549;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5dcdf6;
+    text-align: center;
+}
+
+.row {
     display: flex;
-    
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; /* Allows wrapping if there are too many items */
-   /* gap: 20px;
- 
-  }
-  
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 15px;
+}
 
 .photo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 150px;
-   transition: 1s;
-  }
-  .photo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 2px solid #dacdcd;
-    margin-bottom: 10px;
-  }
-.photo:hover{
-    transform:scale(1.3);
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #f0f2f5;
+}
+
 .photo h4 {
+    color: #003549;
     font-size: 18px;
-    
-    color: #bdb2b2;
-  }
-  .photo p {
-    font-size: 16px;
-    margin-top: 0;
-    color: #ddd;
-  }
-  .sample p{
-    font-size: 30px;
-    justify-items: center;
-  }*/
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.photo p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 5px 0;
+}
+
+/* Hide empty cards */
+.photo:empty,
+.photo:not(:has(img[src])),
+.photo:not(:has(h4:not(:empty))),
+div:not(.photo):empty {
+    display: none;
+}
+
+/* Glass morphism card styles */
+.perfect.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.perfect.glass-card .glass {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.perfect.glass-card .photo {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.perfect.glass-card .photo:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.perfect.glass-card h3 {
+    color: #003549;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.perfect.glass-card .photo h4 {
+    color: #002431;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.perfect.glass-card .photo p {
+    color: #003549;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .perfect {
+        margin: 15px auto;
+        padding: 20px;
+    }
+
+    .glass h3 {
+        font-size: 24px;
+    }
+
+    .row {
+        gap: 15px;
+    }
+
+    .photo {
+        width: 220px;
+    }
+
+    .photo img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .perfect {
+        margin: 10px;
+        padding: 15px;
+        width: 95%;
+    }
+
+    .photo {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .photo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .glass h3 {
+        font-size: 20px;
+    }
+}
 
 /* Properties for middle section (below water) */
 .sec {
@@ -343,6 +371,25 @@ display: flex;
     padding-bottom: 15%;
     z-index: 50;
     overflow: hidden;
+}
+
+/* Override the base white color for the internship section */
+.sec .perfect {
+    color: #000000;
+}
+
+.sec .perfect p {
+    color: #000000 !important;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 15px 0;
+    padding: 0 20px;
+}
+
+/* Ensure all text in this section is black */
+.sec .perfect * {
+    color: #000000 !important;
 }
 
 /* Properties for text content */
@@ -380,7 +427,6 @@ display: flex;
 .sec ul li {
     margin: 2%;
 }
-
 
 /* Make all fishes image as absolute.. To overlap with background */
 .fishes {

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #4285f4;
+            --secondary-color: #34a853;
+            --accent-color: #ea4335;
+            --background-start: #f8f9fa;
+            --background-end: #e8eaed;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, var(--background-start) 0%, var(--background-end) 100%);
+            position: relative;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Interactive Background */
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            opacity: 0.15;
+            pointer-events: none;
+            background: linear-gradient(45deg, rgba(66, 133, 244, 0.1), rgba(52, 168, 83, 0.1));
+        }
+
+        .floating-icon {
+            position: absolute;
+            animation: float 15s infinite linear;
+            opacity: 0.8;
+            font-size: 2rem;
+        }
+
+        .floating-icon:nth-child(3n) {
+            color: var(--primary-color);
+        }
+
+        .floating-icon:nth-child(3n+1) {
+            color: var(--secondary-color);
+        }
+
+        .floating-icon:nth-child(3n+2) {
+            color: var(--accent-color);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(100px, 100px) rotate(90deg);
+            }
+            50% {
+                transform: translate(200px, 0) rotate(180deg);
+            }
+            75% {
+                transform: translate(100px, -100px) rotate(270deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
+        .companies-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .company-section {
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .company-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .company-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .company-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .company-card:hover::before {
+            opacity: 1;
+        }
+
+        .company-name {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .back-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
+        }
+
+        .search-container {
+            margin: 20px 0;
+        }
+
+        .search-input {
+            padding: 15px 25px;
+            border: 2px solid rgba(66, 133, 244, 0.2);
+            border-radius: 12px;
+            width: 100%;
+            max-width: 400px;
+            margin-right: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(66, 133, 244, 0.1);
+        }
+
+        .company-count {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .filter-buttons {
+            margin: 20px 0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .filter-button.active {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+        }
+
+        .company-info {
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #666;
+            margin-right: 10px;
+        }
+
+        .internship-details {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .skills-tag {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a73e8;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin: 5px;
+            font-size: 0.9em;
+        }
+
+        .location-badge {
+            background: #e8f0fe;
+            color: #1a73e8;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-container" id="backgroundContainer"></div>
+    <div class="companies-container">
+        <a href="index.html" class="back-button">← Back to Home</a>
+        <h1>Companies & Internship Opportunities</h1>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-input" placeholder="Search companies, locations, or skills...">
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-button active" data-type="all">All</button>
+            <button class="filter-button" data-type="company">Companies</button>
+            <button class="filter-button" data-type="institution">Educational Institutions</button>
+        </div>
+        
+        <div class="company-count" id="companyCount"></div>
+        <div id="companies-list"></div>
+    </div>
+
+    <script>
+        async function loadCompanies() {
+            try {
+                const response = await fetch('../internships_database.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load internship data');
+                }
+
+                const data = await response.json();
+                displayCompanies(data);
+                setupSearch(data);
+                updateCompanyCount(data);
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('companies-list').innerHTML = 
+                    '<div class="company-card">Error loading company data. Please try again later.</div>';
+            }
+        }
+
+        function displayCompanies(data) {
+            const companiesList = document.getElementById('companies-list');
+            companiesList.innerHTML = '';
+
+            // Display companies
+            data.companies.forEach(company => {
+                const card = createCompanyCard(company, 'company');
+                companiesList.appendChild(card);
+            });
+
+            // Display educational institutions
+            data.educational_institutions.forEach(institution => {
+                const card = createCompanyCard(institution, 'institution');
+                companiesList.appendChild(card);
+            });
+        }
+
+        function createCompanyCard(entity, type) {
+            const card = document.createElement('div');
+            card.className = 'company-card';
+            card.dataset.type = type;
+
+            const location = entity.location ? 
+                `<div class="location-badge">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    ${entity.location.city}, ${entity.location.state}
+                </div>` : '';
+
+            const internshipDetails = entity.internship_details ? 
+                `<div class="internship-details">
+                    <p><strong>Duration:</strong> ${entity.internship_details.duration || 'Not specified'}</p>
+                    ${entity.internship_details.domains ? 
+                        `<p><strong>Domains:</strong> ${entity.internship_details.domains.map(domain => 
+                            `<span class="skills-tag">${domain}</span>`).join('')}</p>` : ''}
+                    ${entity.internship_details.skills_required ? 
+                        `<p><strong>Required Skills:</strong> ${entity.internship_details.skills_required.map(skill => 
+                            `<span class="skills-tag">${skill}</span>`).join('')}</p>` : ''}
+                </div>` : '';
+
+            const services = entity.services ? 
+                `<div class="company-info">
+                    <span class="info-label">Services:</span>
+                    ${entity.services.map(service => `<span class="skills-tag">${service}</span>`).join('')}
+                </div>` : '';
+
+            card.innerHTML = `
+                <h2 class="company-name">${entity.name}</h2>
+                ${location}
+                <div class="company-info">
+                    <span class="info-label">Type:</span> ${entity.type}
+                </div>
+                ${services}
+                ${internshipDetails}
+                ${entity.contact ? `
+                    <div class="company-info">
+                        <span class="info-label">Contact:</span>
+                        ${entity.contact.email ? `<div>Email: ${entity.contact.email}</div>` : ''}
+                        ${entity.contact.phone ? `<div>Phone: ${entity.contact.phone}</div>` : ''}
+                    </div>
+                ` : ''}
+            `;
+
+            return card;
+        }
+
+        function setupSearch(data) {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', () => {
+                const searchTerm = searchInput.value.toLowerCase();
+                const cards = document.querySelectorAll('.company-card');
+                
+                cards.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    card.style.display = text.includes(searchTerm) ? '' : 'none';
+                });
+                
+                updateCompanyCount(data);
+            });
+
+            // Filter buttons
+            document.querySelectorAll('.filter-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active state
+                    document.querySelectorAll('.filter-button').forEach(btn => 
+                        btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filterType = button.dataset.type;
+                    const cards = document.querySelectorAll('.company-card');
+                    
+                    cards.forEach(card => {
+                        if (filterType === 'all') {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = card.dataset.type === filterType ? '' : 'none';
+                        }
+                    });
+                    
+                    updateCompanyCount(data);
+                });
+            });
+        }
+
+        function updateCompanyCount(data) {
+            const visibleCards = document.querySelectorAll('.company-card[style=""]').length;
+            const countElement = document.getElementById('companyCount');
+            countElement.textContent = `Showing ${visibleCards} results`;
+        }
+
+        // Background animation
+        function createFloatingIcons() {
+            const container = document.getElementById('backgroundContainer');
+            const icons = [
+                'fa-building', 'fa-laptop-code', 'fa-microchip', 
+                'fa-network-wired', 'fa-robot', 'fa-code',
+                'fa-database', 'fa-cloud', 'fa-cogs'
+            ];
+            
+            for (let i = 0; i < 15; i++) {
+                const icon = document.createElement('i');
+                const randomIcon = icons[Math.floor(Math.random() * icons.length)];
+                icon.className = `floating-icon fas ${randomIcon}`;
+                
+                // Random starting position
+                icon.style.left = `${Math.random() * 100}vw`;
+                icon.style.top = `${Math.random() * 100}vh`;
+                
+                // Random animation duration and delay
+                const duration = 15 + Math.random() * 10;
+                const delay = Math.random() * 10;
+                icon.style.animation = `float ${duration}s infinite linear ${delay}s`;
+                
+                container.appendChild(icon);
+            }
+        }
+
+        // Initialize background
+        createFloatingIcons();
+        loadCompanies();
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .details-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .company-section {
+            margin-bottom: 30px;
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .company-name {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        .company-card {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+        .company-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .company-info {
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #34495e;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="details-container">
+        <div id="company-details">
+            Loading company details...
+        </div>
+    </div>
+
+    <script>
+        async function loadCompanyDetails() {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                const studentName = urlParams.get('student');
+                const mentor = urlParams.get('mentor');
+
+                if (!studentName || !mentor) {
+                    throw new Error('Student name and mentor are required');
+                }
+
+                const response = await fetch('details.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load company data');
+                }
+
+                const data = await response.json();
+                const studentData = data[mentor]?.find(student => 
+                    (student['Name Of Student'] === studentName || student['Name of Student'] === studentName)
+                );
+
+                if (!studentData) {
+                    throw new Error('Student not found');
+                }
+
+                const company = {
+                    name: studentData['Company'] || studentData['Company Name'],
+                    location: studentData['Location'] || 'N/A',
+                    industry: studentData['Industry'] || 'N/A',
+                    project: studentData['Project Name'] || 'N/A',
+                    description: studentData['Project Description'] || 'N/A',
+                    mentor: mentor,
+                    status: studentData['Status'] || 'N/A'
+                };
+
+                displayCompanyDetails(company, studentData);
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('company-details').innerHTML = `Error loading company details: ${error.message}`;
+            }
+        }
+
+        function displayCompanyDetails(company, studentData) {
+            const container = document.getElementById('company-details');
+            const section = document.createElement('div');
+            section.className = 'company-section';
+
+            const companyCard = document.createElement('div');
+            companyCard.className = 'company-card';
+
+            const companyName = document.createElement('div');
+            companyName.className = 'company-name';
+            companyName.textContent = company.name;
+
+            const infoFields = [
+                { label: 'Company Name', value: company.name },
+                { label: 'Student Name', value: studentData['Name Of Student'] || studentData['Name of Student'] },
+                { label: 'Location', value: company.location },
+                { label: 'Industry', value: company.industry },
+                { label: 'Project Name', value: company.project },
+                { label: 'Project Description', value: company.description },
+                { label: 'Mentor', value: company.mentor },
+                { label: 'Status', value: company.status }
+            ];
+
+            // Add progress information if available
+            if (studentData['Completion Status March'] || studentData['Completion Status April'] || studentData['Completion Status May']) {
+                const progressInfo = {
+                    March: studentData['Completion Status March'] || studentData['Completion Status March '] || '0',
+                    April: studentData['Completion Status April'] || studentData['Completion Status April '] || '0',
+                    May: studentData['Completion Status May'] || studentData['Completion Status May '] || '0'
+                };
+                
+                infoFields.push({ 
+                    label: 'Progress', 
+                    value: `March: ${progressInfo.March}%, April: ${progressInfo.April}%, May: ${progressInfo.May}%` 
+                });
+            }
+
+            // Add remarks if available
+            if (studentData['Remarks']) {
+                infoFields.push({ label: 'Remarks', value: studentData['Remarks'] });
+            }
+
+            const infoElements = infoFields.map(field => {
+                const div = document.createElement('div');
+                div.className = 'company-info';
+                div.innerHTML = `<span class="info-label">${field.label}:</span> ${field.value || 'N/A'}`;
+                return div;
+            });
+
+            companyCard.appendChild(companyName);
+            infoElements.forEach(element => companyCard.appendChild(element));
+            section.appendChild(companyCard);
+            container.appendChild(section);
+        }
+
+        loadCompanyDetails();
+    </script>
+</body>
+</html>

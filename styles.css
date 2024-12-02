@@ -40,9 +40,188 @@ h1 {
     flex: 1;
 }
 
+/* Internship Section Styles */
+.internship-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.internship-section h2 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.internship-section #name {
+    color: #7f8c8d;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.internship-section p {
+    color: #34495e;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.internship-section .highlight {
+    color: #3498db;
+    font-weight: 600;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Card Container Styles */
+.perfect {
+    background: #ffffff;
+    border-radius: 15px;
+    margin: 25px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.glass {
+    padding: 15px;
+}
+
+.glass h3 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+.glass .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.photo {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.photo img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #f0f2f5;
+}
+
+.photo h4 {
+    color: #2c3e50;
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.photo p {
+    color: #7f8c8d;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Hide empty cards */
+.photo:empty,
+.photo:not(:has(img[src])),
+.photo:not(:has(h4:not(:empty))),
+div:not(.photo):empty {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .internship-section {
+        padding: 30px 15px;
+    }
+
+    .internship-section h2 {
+        font-size: 2em;
+    }
+
+    .internship-section p {
+        font-size: 1em;
+        padding: 0 15px;
+    }
+
+    .perfect {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .photo {
+        width: 220px;
+    }
+
+    .photo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .glass h3 {
+        font-size: 20px;
+    }
+}
+
 @media (max-width: 600px) {
     .container {
         margin: 20px;
         padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .perfect {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .photo {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .photo img {
+        width: 120px;
+        height: 120px;
     }
 }

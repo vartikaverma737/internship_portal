@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Database</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .internship-container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .institution-card, .company-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .card-title {
+            font-size: 1.5em;
+            color: #fff;
+        }
+        .location {
+            color: #ccc;
+        }
+        .details {
+            margin: 10px 0;
+            color: #fff;
+        }
+        .contact-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .filter-section {
+            margin: 20px 0;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .filter-button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .filter-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            margin-bottom: 20px;
+        }
+        .search-box::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <img src="images/students/csvtu logo.webp" alt="">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="all_details.html">Student Details</a></li>
+            <li><a href="companies.html">Companies</a></li>
+            <li><a href="#sec">About</a></li>
+            <li><a href="#footer">Contact</a></li>
+        </ul>
+    </header>
+
+    <div class="internship-container">
+        <h1 style="color: white; text-align: center; margin: 40px 0;">Internship Opportunities</h1>
+        
+        <input type="text" class="search-box" placeholder="Search for internships..." id="searchBox">
+        
+        <div class="filter-section">
+            <button class="filter-button" data-filter="all">All</button>
+            <button class="filter-button" data-filter="institution">Educational Institutions</button>
+            <button class="filter-button" data-filter="company">Companies</button>
+        </div>
+
+        <div id="internshipList">
+            <!-- Internship cards will be dynamically added here -->
+        </div>
+    </div>
+
+    <script>
+        // Fetch and display internship data
+        fetch('../internships_database.json')
+            .then(response => response.json())
+            .then(data => {
+                const internshipList = document.getElementById('internshipList');
+                
+                // Display educational institutions
+                data.educational_institutions.forEach(institution => {
+                    const card = document.createElement('div');
+                    card.className = 'institution-card';
+                    card.innerHTML = `
+                        <div class="card-header">
+                            <h2 class="card-title">${institution.name}</h2>
+                            <span class="location">${institution.location?.city || ''}, ${institution.location?.state || ''}</span>
+                        </div>
+                        <div class="details">
+                            <p><strong>Type:</strong> ${institution.type}</p>
+                            ${institution.established ? `<p><strong>Established:</strong> ${institution.established}</p>` : ''}
+                            ${institution.internship_details ? `
+                                <p><strong>Internship Duration:</strong> ${institution.internship_details.duration || 'Not specified'}</p>
+                                ${institution.internship_details.domains ? 
+                                    `<p><strong>Domains:</strong> ${institution.internship_details.domains.join(', ')}</p>` : ''}
+                            ` : ''}
+                        </div>
+                        ${institution.contact ? `
+                            <div class="contact-info">
+                                <p><strong>Contact:</strong></p>
+                                ${institution.contact.email ? `<p>Email: ${institution.contact.email}</p>` : ''}
+                                ${institution.contact.phone ? `<p>Phone: ${institution.contact.phone}</p>` : ''}
+                            </div>
+                        ` : ''}
+                    `;
+                    internshipList.appendChild(card);
+                });
+
+                // Display companies
+                data.companies.forEach(company => {
+                    const card = document.createElement('div');
+                    card.className = 'company-card';
+                    card.innerHTML = `
+                        <div class="card-header">
+                            <h2 class="card-title">${company.name}</h2>
+                            <span class="location">${company.location?.city || ''}, ${company.location?.state || ''}</span>
+                        </div>
+                        <div class="details">
+                            <p><strong>Type:</strong> ${company.type}</p>
+                            ${company.services ? `
+                                <p><strong>Services:</strong> ${company.services.join(', ')}</p>
+                            ` : ''}
+                            ${company.internship_details ? `
+                                <p><strong>Internship Duration:</strong> ${company.internship_details.duration || 'Not specified'}</p>
+                                ${company.internship_details.domains ? 
+                                    `<p><strong>Domains:</strong> ${company.internship_details.domains.join(', ')}</p>` : ''}
+                                ${company.internship_details.skills_required ? 
+                                    `<p><strong>Required Skills:</strong> ${company.internship_details.skills_required.join(', ')}</p>` : ''}
+                            ` : ''}
+                        </div>
+                    `;
+                    internshipList.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error loading internship data:', error));
+
+        // Search functionality
+        document.getElementById('searchBox').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.institution-card, .company-card');
+            
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(searchTerm) ? '' : 'none';
+            });
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.dataset.filter;
+                const cards = document.querySelectorAll('.institution-card, .company-card');
+                
+                cards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = '';
+                    } else if (filter === 'institution') {
+                        card.style.display = card.classList.contains('institution-card') ? '' : 'none';
+                    } else if (filter === 'company') {
+                        card.style.display = card.classList.contains('company-card') ? '' : 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
